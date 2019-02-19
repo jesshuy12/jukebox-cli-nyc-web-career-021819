@@ -26,11 +26,11 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  input = gets.chomp
-  if (1...9).include?(input.to_i)
-    puts "Playing #{songs[(input.to_i - 1)]}"
-  elsif songs.include?(input)
-    puts "Playing #{input}"
+  input = gets.chomp                                  #user input
+  if (1...9).include?(input.to_i)                     #if user input is number 1-9, change to int
+    puts "Playing #{songs[(input.to_i - 1)]}"         #
+  elsif songs.include?(input)                         #if user input is name of song
+    puts "Playing #{input}"                           
   else
     puts "Invalid input, please try again"
   end
